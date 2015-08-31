@@ -14,5 +14,7 @@ RUN useradd builder -mU
 WORKDIR /home/builder/keyboard/ergodox
 
 # build with jt keymap
-CMD cd /home/builder/keyboard/ergodox && make clean && make -f Makefile.pjrc jt
+CMD cd /home/builder/keyboard/ergodox && \
+  make -f Makefile.pjrc clean && \
+  make -f Makefile.pjrc jt
 
